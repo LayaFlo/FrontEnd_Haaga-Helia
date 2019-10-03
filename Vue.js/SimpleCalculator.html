@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <div id="input"> 
+        Result: {{result}}<br /> 
+        <input v-model="num1" placeholder="First number"> 
+        <input v-model="num2" placeholder="Second number"> 
+        <button v-on:click="plus">+</button>
+        <button v-on:click="minus">-</button>
+    </div>
+    <script> 
+      var app = new Vue({ 
+        el: '#input', 
+        data: { 
+          num1: '',
+          num2: '',
+          result: ''
+        }, 
+        methods: { 
+          plus: function() { 
+            this.result = parseFloat(this.num1) + parseFloat(this.num2); 
+          },
+          minus: function() { 
+            this.result = parseFloat(this.num1) - parseFloat(this.num2); 
+          }
+        }, 
+      })
+    </script>  
+  </body>
+</html>
