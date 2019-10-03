@@ -1,5 +1,5 @@
 # FrontEnd_Haaga-Helia
-React, Vue
+React
 
 ex1 - HelloWorld example;
 ex2 - Counter(plus, minus, reset);
