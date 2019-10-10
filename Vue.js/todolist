@@ -1,0 +1,41 @@
+<template>
+<div>
+    <input type="text" placeholder="Description" v-model="description" />
+    <input type="date" placeholder="Date" v-model="date" />
+    <button v-on:click="add">Add</button><br />
+    <table>
+        <tbody>
+            <tr v-for="(todo, index) in todos" 
+            v-bind:key="index"><td>{{todo.description}}</td> <td>{{todo.date}}</td></tr>
+        </tbody>
+    </table>
+</div>
+</template>
+
+<script>
+export default {
+    name: 'Todolist',
+    data() {
+        return {
+            description: '', 
+            date: '',
+            todos: []
+        }
+    },
+    methods: {
+        add: function() {
+            this.todos.push(this.todo.description, this.todo.date);
+            this.description = '', 
+            this.date = ''
+
+        }
+    },
+}
+</script>
+
+<style scoped>
+    table {
+    margin-left:auto; 
+    margin-right:auto;
+    }
+</style>
